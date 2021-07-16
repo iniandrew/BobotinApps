@@ -4,16 +4,17 @@ from controller import ResultController
 from view.home.ui_home import Ui_Home
 
 
+# Fungsi untuk menampilkan pesan Error
 def showErrorMessage(text):
     msg = QMessageBox()
     msg.setWindowTitle('Error!')
     msg.setText(text)
     msg.setStyleSheet("background: #4834d4;\n"
-                        "color: #FFFFFF;\n"                        
-                        "font-size: 16px;\n"
-                        "font-weight: bold;\n"
-                        "font-family: SF Pro Display;\n"
-                        "padding: 16px")
+                      "color: #FFFFFF;\n"
+                      "font-size: 16px;\n"
+                      "font-weight: bold;\n"
+                      "font-family: SF Pro Display;\n"
+                      "padding: 16px")
     msg.exec_()
 
 
@@ -27,9 +28,11 @@ class HomeController(QMainWindow, Ui_Home):
         self.ideal = ''
         self.tips = ''
 
+        # Memberikan aksi ketika pengguna memilih jenis kelamin
         self.btnMale.toggled.connect(self.chooseGender)
         self.btnFemale.toggled.connect(self.chooseGender)
 
+        # Memberikan aksi ketika tombol submit di Klik
         self.btnSubmit.clicked.connect(self.moveToResultPage)
 
         # Validasi inputan hanya angka
@@ -40,7 +43,6 @@ class HomeController(QMainWindow, Ui_Home):
     def moveToResultPage(self):
         try:
             gender = self.chooseGender()
-            age = int(self.edt_age.text())
             height = int(self.edt_height.text())
             weight = int(self.edt_weight.text())
             mHeight = height / 100.0  # Konversi ke meter
@@ -79,7 +81,7 @@ class HomeController(QMainWindow, Ui_Home):
             else:
                 self.tips = 'Mulailah merubah kebiasaan hidup anda, kurangi konsumsi karbohidrat. Serta luangkan waktu anda untuk berolahraga'
 
-            if self.chooseGender() != '' and self.edt_age.text() != '' and self.edt_weight.text() != '' and self.edt_height.text() != '':
+            if self.chooseGender() != '' and self.edt_age.text() != '' and self.edt_weight.text() != '' and self.edt_height.text() != '' and int(self.edt_age.text()) > 12:
                 self.form = ResultController.ResultController()
                 self.form.tvCount.setText(result)
                 self.form.tvResult.setText(self.category)
@@ -92,16 +94,19 @@ class HomeController(QMainWindow, Ui_Home):
 
         except:
             if self.chooseGender() == '' and self.edt_age.text() == '' and self.edt_weight.text() == '' and self.edt_height.text() == '':
-                showErrorMessage('Mohon isi isian dengan benar!')
+                showErrorMessage('Mohon isi data terlebih dahulu!')
             elif self.chooseGender() == '':
                 showErrorMessage('Jenis Kelamin belum di pilih!')
             elif self.edt_age.text() == '':
                 showErrorMessage('Isian umur belum di isi!')
+            elif int(self.edt_age.text()) <= 12:
+                showErrorMessage('Usia harus lebih dari 12')
             elif self.edt_height.text() == '':
                 showErrorMessage('Isian tinggi belum di isi!')
             elif self.edt_weight.text() == '':
                 showErrorMessage('Isian berat belum di isi!')
 
+    # Fungsi untuk memilih jenis kelamin
     def chooseGender(self):
         gender = ''
 
