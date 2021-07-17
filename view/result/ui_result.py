@@ -173,7 +173,7 @@ class Ui_Result(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Bobotin - Hasil"))
         self.tvTitle.setText(_translate("Form", "HASIL"))
         self.btnRepeat.setToolTip(_translate("Form",
                                              "<html><head/><body><p><span style=\" font-weight:400;\">Ulangi Program</span></p></body></html>"))
@@ -191,5 +191,4 @@ class Ui_Result(object):
                                        "p, li { white-space: pre-wrap; }\n"
                                        "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
                                        "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Lorem ipsum dolor sit amet</p></body></html>"))
-
 

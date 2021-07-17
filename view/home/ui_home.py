@@ -58,6 +58,7 @@ class Ui_Home(object):
         self.edt_age.setInputMethodHints(QtCore.Qt.ImhNone)
         self.edt_age.setInputMask("")
         self.edt_age.setText("")
+        self.edt_age.setClearButtonEnabled(True)
         self.edt_age.setObjectName("edt_age")
         self.edt_height = QtWidgets.QLineEdit(self.widget)
         self.edt_height.setGeometry(QtCore.QRect(420, 460, 411, 51))
@@ -69,6 +70,7 @@ class Ui_Home(object):
                                       "border-radius: 24px;\n"
                                       "padding-left: 14px;")
         self.edt_height.setText("")
+        self.edt_height.setClearButtonEnabled(True)
         self.edt_height.setObjectName("edt_height")
         self.btnSubmit = QtWidgets.QPushButton(self.widget)
         self.btnSubmit.setGeometry(QtCore.QRect(420, 640, 411, 51))
@@ -104,6 +106,7 @@ class Ui_Home(object):
                                       "")
         self.edt_weight.setInputMask("")
         self.edt_weight.setText("")
+        self.edt_weight.setClearButtonEnabled(True)
         self.edt_weight.setObjectName("edt_weight")
         self.btnMale = QtWidgets.QRadioButton(self.widget)
         self.btnMale.setGeometry(QtCore.QRect(510, 330, 61, 16))
@@ -150,7 +153,7 @@ class Ui_Home(object):
 
     def retranslateUi(self, widget_2):
         _translate = QtCore.QCoreApplication.translate
-        widget_2.setWindowTitle(_translate("widget_2", "Form"))
+        widget_2.setWindowTitle(_translate("widget_2", "Bobotin - Home"))
         self.tvTitle.setText(_translate("widget_2", "BOBOTIN"))
         self.edt_age.setToolTip(
             _translate("widget_2", "<html><head/><body><p>Masukan berat badan anda</p></body></html>"))
@@ -163,5 +166,3 @@ class Ui_Home(object):
         self.edt_weight.setPlaceholderText(_translate("widget_2", "Berat (kg)"))
         self.imgMale.setToolTip(_translate("widget_2", "<html><head/><body><p>Laki-Laki</p></body></html>"))
         self.imgFemale.setToolTip(_translate("widget_2", "<html><head/><body><p>Perempuan</p></body></html>"))
-
-

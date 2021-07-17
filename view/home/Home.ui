@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Bobotin - Home</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/asset/Background.png);</string>
@@ -145,6 +145,9 @@ padding-left: 14px;</string>
        <property name="placeholderText">
         <string>Umur</string>
        </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
       </widget>
       <widget class="QLineEdit" name="edt_height">
        <property name="geometry">
@@ -174,6 +177,9 @@ padding-left: 14px;</string>
        </property>
        <property name="placeholderText">
         <string>Tinggi (cm)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btnSubmit">
@@ -253,6 +259,9 @@ padding-left: 14px;
        </property>
        <property name="placeholderText">
         <string>Berat (kg)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QRadioButton" name="btnMale">
