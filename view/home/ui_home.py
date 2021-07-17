@@ -25,16 +25,16 @@ class Ui_Home(object):
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_2.addItem(spacerItem, 2, 0, 1, 1)
+        self.gridLayout_2.addItem(spacerItem, 14, 0, 1, 1)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_2.addItem(spacerItem1, 14, 0, 1, 1)
+        self.gridLayout_2.addItem(spacerItem1, 2, 0, 1, 1)
         self.widget = QtWidgets.QWidget(self.gridLayoutWidget)
         self.widget.setMinimumSize(QtCore.QSize(1200, 800))
         self.widget.setMaximumSize(QtCore.QSize(1200, 800))
         self.widget.setStyleSheet("")
         self.widget.setObjectName("widget")
         self.tvTitle = QtWidgets.QLabel(self.widget)
-        self.tvTitle.setGeometry(QtCore.QRect(470, 30, 321, 61))
+        self.tvTitle.setGeometry(QtCore.QRect(100, 20, 1031, 61))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
         font.setPointSize(54)
@@ -44,6 +44,7 @@ class Ui_Home(object):
         self.tvTitle.setFont(font)
         self.tvTitle.setStyleSheet("color: #ffffff;\n"
                                    "background: transparent;")
+        self.tvTitle.setAlignment(QtCore.Qt.AlignCenter)
         self.tvTitle.setObjectName("tvTitle")
         self.edt_age = QtWidgets.QLineEdit(self.widget)
         self.edt_age.setGeometry(QtCore.QRect(420, 390, 411, 51))
@@ -53,12 +54,11 @@ class Ui_Home(object):
         self.edt_age.setFont(font)
         self.edt_age.setStyleSheet("background: #FFFFFF;\n"
                                    "border-radius: 24px;\n"
-                                   "padding: 14px;")
+                                   "padding-left: 14px;")
         self.edt_age.setInputMethodHints(QtCore.Qt.ImhNone)
         self.edt_age.setInputMask("")
         self.edt_age.setText("")
         self.edt_age.setObjectName("edt_age")
-        self.edt_age.setClearButtonEnabled(True)
         self.edt_height = QtWidgets.QLineEdit(self.widget)
         self.edt_height.setGeometry(QtCore.QRect(420, 460, 411, 51))
         font = QtGui.QFont()
@@ -67,15 +67,14 @@ class Ui_Home(object):
         self.edt_height.setFont(font)
         self.edt_height.setStyleSheet("background: #FFFFFF;\n"
                                       "border-radius: 24px;\n"
-                                      "padding: 14px;")
+                                      "padding-left: 14px;")
         self.edt_height.setText("")
         self.edt_height.setObjectName("edt_height")
-        self.edt_height.setClearButtonEnabled(True)
         self.btnSubmit = QtWidgets.QPushButton(self.widget)
-        self.btnSubmit.setGeometry(QtCore.QRect(420, 650, 411, 51))
+        self.btnSubmit.setGeometry(QtCore.QRect(420, 640, 411, 51))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
-        font.setPointSize(16)
+        font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         self.btnSubmit.setFont(font)
@@ -84,7 +83,7 @@ class Ui_Home(object):
                                      "    background: #686DE0;\n"
                                      "    border-radius: 24;\n"
                                      "    color: #FFFFFF;    \n"
-                                     "    padding: 16px;\n"
+                                     "    padding: 12px;\n"
                                      "}\n"
                                      "\n"
                                      "*:hover {\n"
@@ -101,21 +100,20 @@ class Ui_Home(object):
         self.edt_weight.setFont(font)
         self.edt_weight.setStyleSheet("background: #FFFFFF;\n"
                                       "border-radius: 24px;\n"
-                                      "padding: 14px;\n"
+                                      "padding-left: 14px;\n"
                                       "")
         self.edt_weight.setInputMask("")
         self.edt_weight.setText("")
         self.edt_weight.setObjectName("edt_weight")
-        self.edt_weight.setClearButtonEnabled(True)
         self.btnMale = QtWidgets.QRadioButton(self.widget)
-        self.btnMale.setGeometry(QtCore.QRect(510, 330, 16, 16))
+        self.btnMale.setGeometry(QtCore.QRect(510, 330, 61, 16))
         self.btnMale.setStyleSheet("background: #130F40;\n"
                                    "color: #130F40;")
         self.btnMale.setText("")
         self.btnMale.setChecked(False)
         self.btnMale.setObjectName("btnMale")
         self.btnFemale = QtWidgets.QRadioButton(self.widget)
-        self.btnFemale.setGeometry(QtCore.QRect(730, 330, 16, 17))
+        self.btnFemale.setGeometry(QtCore.QRect(730, 330, 71, 17))
         self.btnFemale.setStyleSheet("background: #130F40;\n"
                                      "color: #130F40;")
         self.btnFemale.setText("")
@@ -152,7 +150,7 @@ class Ui_Home(object):
 
     def retranslateUi(self, widget_2):
         _translate = QtCore.QCoreApplication.translate
-        widget_2.setWindowTitle(_translate("widget_2", "BOBOTIN"))
+        widget_2.setWindowTitle(_translate("widget_2", "Form"))
         self.tvTitle.setText(_translate("widget_2", "BOBOTIN"))
         self.edt_age.setToolTip(
             _translate("widget_2", "<html><head/><body><p>Masukan berat badan anda</p></body></html>"))
@@ -165,4 +163,5 @@ class Ui_Home(object):
         self.edt_weight.setPlaceholderText(_translate("widget_2", "Berat (kg)"))
         self.imgMale.setToolTip(_translate("widget_2", "<html><head/><body><p>Laki-Laki</p></body></html>"))
         self.imgFemale.setToolTip(_translate("widget_2", "<html><head/><body><p>Perempuan</p></body></html>"))
+
 

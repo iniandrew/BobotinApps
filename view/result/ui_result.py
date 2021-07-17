@@ -34,7 +34,7 @@ class Ui_Result(object):
         self.widget.setStyleSheet("")
         self.widget.setObjectName("widget")
         self.tvTitle = QtWidgets.QLabel(self.widget)
-        self.tvTitle.setGeometry(QtCore.QRect(510, 30, 221, 61))
+        self.tvTitle.setGeometry(QtCore.QRect(120, 30, 1001, 61))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
         font.setPointSize(54)
@@ -44,12 +44,13 @@ class Ui_Result(object):
         self.tvTitle.setFont(font)
         self.tvTitle.setStyleSheet("color: #ffffff;\n"
                                    "background: transparent;")
+        self.tvTitle.setAlignment(QtCore.Qt.AlignCenter)
         self.tvTitle.setObjectName("tvTitle")
         self.btnRepeat = QtWidgets.QPushButton(self.widget)
         self.btnRepeat.setGeometry(QtCore.QRect(750, 590, 131, 51))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
-        font.setPointSize(16)
+        font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         self.btnRepeat.setFont(font)
@@ -58,7 +59,7 @@ class Ui_Result(object):
                                      "    background: #686DE0;\n"
                                      "    border-radius: 24px;\n"
                                      "    color: #FFFFFF;\n"
-                                     "    padding: 16px;\n"
+                                     "    padding: 12px;\n"
                                      "}\n"
                                      "\n"
                                      "*:hover {\n"
@@ -66,7 +67,7 @@ class Ui_Result(object):
                                      "}")
         self.btnRepeat.setObjectName("btnRepeat")
         self.tvDescription = QtWidgets.QLabel(self.widget)
-        self.tvDescription.setGeometry(QtCore.QRect(740, 190, 251, 71))
+        self.tvDescription.setGeometry(QtCore.QRect(740, 190, 421, 71))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
         font.setPointSize(32)
@@ -92,19 +93,20 @@ class Ui_Result(object):
         self.tvIdeal.setStyleSheet("background: white")
         self.tvIdeal.setObjectName("tvIdeal")
         self.tvBMI = QtWidgets.QLabel(self.widget)
-        self.tvBMI.setGeometry(QtCore.QRect(260, 190, 141, 61))
+        self.tvBMI.setGeometry(QtCore.QRect(150, 190, 331, 61))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
-        font.setPointSize(42)
+        font.setPointSize(38)
         font.setBold(True)
         font.setItalic(True)
         font.setWeight(75)
         self.tvBMI.setFont(font)
         self.tvBMI.setStyleSheet("color: #ffffff;\n"
                                  "background: transparent;")
+        self.tvBMI.setAlignment(QtCore.Qt.AlignCenter)
         self.tvBMI.setObjectName("tvBMI")
         self.tvResult = QtWidgets.QLabel(self.widget)
-        self.tvResult.setGeometry(QtCore.QRect(160, 540, 311, 51))
+        self.tvResult.setGeometry(QtCore.QRect(140, 540, 361, 51))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
         font.setPointSize(32)
@@ -121,7 +123,7 @@ class Ui_Result(object):
         self.btnClose.setGeometry(QtCore.QRect(920, 590, 131, 51))
         font = QtGui.QFont()
         font.setFamily("SF Pro Display")
-        font.setPointSize(16)
+        font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         self.btnClose.setFont(font)
@@ -130,7 +132,7 @@ class Ui_Result(object):
                                     "    background: #4834D4;\n"
                                     "    border-radius: 24;\n"
                                     "    color: #FFFFFF;\n"
-                                    "    padding: 16px;\n"
+                                    "    padding: 12px;\n"
                                     "}\n"
                                     "\n"
                                     "*:hover {\n"
@@ -171,7 +173,7 @@ class Ui_Result(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "BOBOTIN | HASIL"))
+        Form.setWindowTitle(_translate("Form", "Form"))
         self.tvTitle.setText(_translate("Form", "HASIL"))
         self.btnRepeat.setToolTip(_translate("Form",
                                              "<html><head/><body><p><span style=\" font-weight:400;\">Ulangi Program</span></p></body></html>"))
@@ -189,3 +191,5 @@ class Ui_Result(object):
                                        "p, li { white-space: pre-wrap; }\n"
                                        "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
                                        "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Lorem ipsum dolor sit amet</p></body></html>"))
+
+

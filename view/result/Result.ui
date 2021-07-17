@@ -84,9 +84,9 @@
       <widget class="QLabel" name="tvTitle">
        <property name="geometry">
         <rect>
-         <x>510</x>
+         <x>120</x>
          <y>30</y>
-         <width>221</width>
+         <width>1001</width>
          <height>61</height>
         </rect>
        </property>
@@ -106,6 +106,9 @@ background: transparent;</string>
        <property name="text">
         <string>HASIL</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
       <widget class="QPushButton" name="btnRepeat">
        <property name="geometry">
@@ -119,7 +122,7 @@ background: transparent;</string>
        <property name="font">
         <font>
          <family>SF Pro Display</family>
-         <pointsize>16</pointsize>
+         <pointsize>14</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -135,7 +138,7 @@ background: transparent;</string>
 	background: #686DE0;
 	border-radius: 24px;
 	color: #FFFFFF;
-	padding: 16px;
+	padding: 12px;
 }
 
 *:hover {
@@ -151,7 +154,7 @@ background: transparent;</string>
         <rect>
          <x>740</x>
          <y>190</y>
-         <width>251</width>
+         <width>421</width>
          <height>71</height>
         </rect>
        </property>
@@ -212,16 +215,16 @@ border-radius: 24px</string>
       <widget class="QLabel" name="tvBMI">
        <property name="geometry">
         <rect>
-         <x>260</x>
+         <x>150</x>
          <y>190</y>
-         <width>141</width>
+         <width>331</width>
          <height>61</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>SF Pro Display</family>
-         <pointsize>42</pointsize>
+         <pointsize>38</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -234,13 +237,16 @@ background: transparent;</string>
        <property name="text">
         <string>BMI</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
       <widget class="QLabel" name="tvResult">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>140</x>
          <y>540</y>
-         <width>311</width>
+         <width>361</width>
          <height>51</height>
         </rect>
        </property>
@@ -279,7 +285,7 @@ background: transparent;</string>
        <property name="font">
         <font>
          <family>SF Pro Display</family>
-         <pointsize>16</pointsize>
+         <pointsize>14</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -295,7 +301,7 @@ background: transparent;</string>
 	background: #4834D4;
 	border-radius: 24;
 	color: #FFFFFF;
-	padding: 16px;
+	padding: 12px;
 }
 
 *:hover {
